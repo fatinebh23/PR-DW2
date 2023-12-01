@@ -1,0 +1,17 @@
+[
+  {
+    "Nombre":"Bob",
+    "Apellidos":"BobBob",
+    "DNI": 123456789
+  },
+  {
+    "Nombre":"Alice",
+    "Apellidos":"Alice",
+    "DNI": 123456789
+  },
+  {
+    "Nombre":"Foo",
+    "Apellidos":"bar",
+    "DNI": 123456789
+  }
+]

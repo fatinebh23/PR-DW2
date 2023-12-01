@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<planta >
+
+    <contendedor tipo="Grande">
+        <envase tipo="grande ancho">
+            <liquido tipo="alimentos">Agua</liquido>
+            <liquido tipo="alimentos">Leche</liquido>
+            <liquido tipo="alimentos">Aceite</liquido>
+            <liquido tipo="alimentos">Vinagre</liquido>
+        </envase>
+        <envase tipo="grande alto">
+            <liquido tipo="alimentos">Agua</liquido>
+            <liquido tipo="alimentos">Leche</liquido>
+            <liquido tipo="alimentos">Aceite</liquido>
+            <liquido tipo="alimentos">Vinagre</liquido>
+        </envase>
+    </contendedor>
+    <contendedor tipo="Mediano">
+        <envase tipo="mediano ancho">
+            <liquido tipo="alimentos">Agua</liquido>
+            <liquido tipo="alimentos">Leche</liquido>
+            <liquido tipo="alimentos">Aceite</liquido>Grande alt
+            <liquido tipo="alimentos">Vinagre</liquido>
+        </envase>
+        <envase tipo="mediano alto">
+            <liquido tipo="sustancias corrosivas">Lejia</liquido>
+            <liquido tipo="sustancias corrosivas">Amoniaco</liquido>
+            <liquido tipo="sustancias corrosivas">Aguarras</liquido>
+            <liquido tipo="sustancias corrosivas">Gasolina</liquido>
+            <liquido tipo="sustancias corrosivas">Alcohol</liquido>
+            <liquido tipo="sustancias corrosivas">Jabon</liquido>
+        </envase>
+        <envase tipo="envase pequeño">
+            <liquido tipo="sustancias corrosivas">Lejia</liquido>
+            <liquido tipo="sustancias corrosivas">Amoniaco</liquido>
+            <liquido tipo="sustancias corrosivas">Aguarras</liquido>
+            <liquido tipo="sustancias corrosivas">Gasolina</liquido>
+            <liquido tipo="sustancias corrosivas">Alcohol</liquido>
+            <liquido tipo="sustancias corrosivas">Jabon</liquido>
+        </envase>
+
+    </contendedor>
+    <contendedor tipo="Vertical">
+        <envase tipo="vertical alto">
+        <liquido tipo="alimentos">Agua</liquido>
+        <liquido tipo="alimentos">Leche</liquido>
+        <liquido tipo="alimentos">Aceite</liquido>
+        <liquido tipo="alimentos">Vinagre</liquido>
+            <liquido tipo="sustancias corrosivas">Lejia</liquido>
+            <liquido tipo="sustancias corrosivas">Amoniaco</liquido>
+            <liquido tipo="sustancias corrosivas">Aguarras</liquido>
+            <liquido tipo="sustancias corrosivas">Gasolina</liquido>
+            <liquido tipo="sustancias corrosivas">Alcohol</liquido>
+            <liquido tipo="sustancias corrosivas">Jabon</liquido>
+        </envase>
+    </contendedor>
+</planta>
