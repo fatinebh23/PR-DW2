@@ -1,0 +1,11 @@
+[ {
+  "nombre" : "fatine",
+  "deporte" : "futbol",
+  "edad" : 19,
+  "pais" : "marruecos"
+}, {
+  "nombre" : "patri",
+  "deporte" : "voley",
+  "edad" : 20,
+  "pais" : "españa"
+} ]
