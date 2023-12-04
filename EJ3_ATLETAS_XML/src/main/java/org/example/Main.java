@@ -26,10 +26,6 @@ public class Main {
         List<AtletaFemenina> atletas = List.of(atleta1, atleta2,atleta3);
         ListasAtleta coleccionAtletas= new ListasAtleta(atletas);
 
-       /* coleccionAtletas.anyadirAtleta(atleta1);
-        coleccionAtletas.anyadirAtleta(atleta2);
-        coleccionAtletas.anyadirAtleta(atleta3);*/
-
         escribirListaObjetos(coleccionAtletas.getListaAtletas(),miRutaAtletas);
 
         List<AtletaFemenina> listaAtletasPasado=  leerArrayObjetosXml(miRutaAtletas);
