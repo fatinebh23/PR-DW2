@@ -5,7 +5,11 @@ import java.io.Serializable;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static java.nio.file.Files.lines;
@@ -15,10 +19,12 @@ public class ColecciondeProduct implements Serializable {
     List<Product> listaCSV = new ArrayList<>();
 
     List<Product> listaCSV2 = new ArrayList<Product>();
-    public  ColecciondeProduct(Path path) throws IOException {
-        //Leer el fichero de funkos.csv y crear una lista de objetos main.Funko
-        try (Stream<String> contenidoFichero3 = Files.lines(path);) {
 
+    public ColecciondeProduct(Path path) throws IOException {
+        //Leer el fichero de funkos.csv y crear una lista de objetos main.Product
+
+        // Imprimir la lista de productos y pasar la lista de strings a lo que toca ---IMPORTANTE---
+        try (Stream<String> contenidoFichero3 = Files.lines(path);) {
 
             List<String> linea = Files.readAllLines(Path.of(".", "src", "main", "resources", "LeerFichero.csv"));
             String[] fun;
@@ -42,5 +48,67 @@ public class ColecciondeProduct implements Serializable {
                 IOException e) {
             e.printStackTrace(System.out);
         }
+    }
+
+    public ColecciondeProduct(List<Product> listaCSV) {
+        this.listaCSV = listaCSV;
+    }
+
+    //Imprimimos el funko más caro. Opción 1
+    public void imprimirLosNombresProductos() {
+        //opción 1
+        System.out.println("LOS NOMBRES DE LOS PRODUCTOS SON : ");
+        listaCSV2.stream()
+                .map(Product::getName)
+                .forEach(System.out::println);
+    }
+
+    //Imprimir los nombres de los productos cuyas unidades en stock sean menor que 10
+    public void imprimirLosNombresProductosStockmenorDiez() {
+
+        // unitsInStock> 10: NOMBRE DEL PRODUCTO
+        System.out.println("PRODUCTOS CUYAS UNIDADES EN STOCK SEAN MENOR QUE 10: ");
+        listaCSV2.stream()
+                .filter(Product -> Product.getUnitsInStock() < 10)
+                .map(Product::getName)
+                .forEach(System.out::println);
+
+    }
+
+    /*Imprimir el nombre de los productos con unidades en stock mayor de 10 ordenados por unidad de
+    stock de forma descendente*/
+    public void imprimirLosNombresProductosStockmeyorDiez() {
+
+        // unitsInStock> 10: NOMBRE DEL PRODUCTO
+        System.out.println("PRODUCTOS CUYAS UNIDADES EN STOCK SEAN MAAYOR QUE 10: ");
+        listaCSV2.stream()
+                .filter(Product -> Product.getUnitsInStock() > 10)
+                .sorted(Comparator.comparingInt(Product::getUnitsInStock).reversed())
+                .map(Product::getName)
+                .forEach(System.out::println);
+
+    }
+
+    //Imprimir el número de productos agrupados por proveedor
+
+    public void imprimirNumeroProductoProveedor() {
+        Map<Integer, Long> modeloCountMap = listaCSV2.stream()
+                .collect(Collectors.groupingBy(Product::getSupplier, Collectors.counting()));
+        System.out.println("EL NUMERO DE PRODUCTOS AGRUPADOS POR PROVEEDOR SON:  ");
+        // Imprime el resultado.
+        modeloCountMap
+                .forEach((supplier, count) -> System.out.println("PROVEEDOR: " + supplier + ", CANTIDAD: " + count));
+
+    }
+
+    //Imprimir el producto con el precio unitario más alto
+
+    public void imprimirProductoMasCaro() {
+       /* //opción 1
+        listaCSV = listaCSV.stream().sorted(Comparator.comparing(Funko::getPrecio)).toList();
+        return "El funko más caro es: " + listaCSV.get(listaCSV.size() - 1).getNombre() + " y cuesta " + listaCSV.get(listaCSV.size() - 1).getPrecio() + "€";*/
+        //opción 2
+       /* return "El producto más caro es: " + listaCSV2.stream().max(Comparator.comparing(Product::getUnitPrice)).map(Product::getName) +
+                " y cuesta " + listaCSV2.stream().max(Comparator.comparing(Product::getUnitPrice)).map(Product::getUnitPrice) + "€");*/
     }
 }
