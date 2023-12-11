@@ -16,13 +16,19 @@ public class Product implements Comparable<Product> {
     private int unitsInStock;
 
     //pasar la lista de strings a lo que toca ---IMPORTANTE---
-    public Product(String id, String name, String supplier, String category, String unitPrice, String unitsInStock) {
+   /* public Product(String id, String name, String supplier, String category, String unitPrice, String unitsInStock) {
         this.id = Integer.parseInt(id);
         this.name = name;
         this.supplier = Integer.parseInt(supplier);;
         this.category = Integer.parseInt(category);;
         this.unitPrice = Double.parseDouble(unitPrice);;
         this.unitsInStock = Integer.parseInt(unitsInStock);;
+    }*/
+
+
+    // constructor vacío
+    public Product(){
+
     }
 
     public int getId() {

@@ -4,10 +4,7 @@ import java.io.IOException;
 import java.io.Serializable;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -15,24 +12,34 @@ import static java.nio.file.Files.lines;
 
 public class ColecciondeProduct implements Serializable {
     final String COMMA_DELIMITER = ",";
-    List<Product> listaProduct = new ArrayList<>();
-    public ColecciondeProduct(Path path) throws IOException {
-        //Leer el fichero de product.csv y crear una lista de objetos main.product
+    List<Product> listaCSV = new ArrayList<>();
 
-        try(Stream<String> contenidoFichero = lines(path)) {
-
-            listaProduct = contenidoFichero.skip(1)
-                    .map(l -> Arrays.asList(l.split(COMMA_DELIMITER)))
-                    .map(Product::new)
-                    .toList();
+    List<Product> listaCSV2 = new ArrayList<Product>();
+    public  ColecciondeProduct(Path path) throws IOException {
+        //Leer el fichero de funkos.csv y crear una lista de objetos main.Funko
+        try (Stream<String> contenidoFichero3 = Files.lines(path);) {
 
 
-           /* listaProduct = contenidoFichero.map(l -> Arrays.asList(l.split(COMMA_DELIMITER)))
-                    .skip(1)
-                    .map(l -> new Product(l.get(0),l.get(1),l.get(2),l.get(3),l.get(4),l.get(5),l.get(6),l.get(7),l.get(8),l.get(9).toList());*/
+            List<String> linea = Files.readAllLines(Path.of(".", "src", "main", "resources", "LeerFichero.csv"));
+            String[] fun;
+            System.out.println("Toda la info: ");
+
+            for (int i = 1; i < linea.size(); i++) {
+                Product productoo = new Product();
+                fun = linea.get(i).split(",");
+                productoo.setId(Integer.parseInt(fun[0]));
+                productoo.setName(fun[1]);
+                productoo.setSupplier(Integer.parseInt(fun[2]));
+                productoo.setCategory(Integer.parseInt(fun[3]));
+                productoo.setUnitPrice(Double.parseDouble(fun[5]));
+                productoo.setUnitsInStock(Integer.parseInt(fun[6]));
+                listaCSV2.add(productoo);
+                System.out.println(productoo.toString());
+            }
 
 
-        } catch (IOException e) {
+        } catch (
+                IOException e) {
             e.printStackTrace(System.out);
         }
     }
