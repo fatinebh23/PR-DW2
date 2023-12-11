@@ -1,0 +1,81 @@
+[ {
+  "strTeam" : "Arsenal",
+  "intFormedYear" : "1892",
+  "strStadium" : "Emirates Stadium"
+}, {
+  "strTeam" : "Aston Villa",
+  "intFormedYear" : "1874",
+  "strStadium" : "Villa Park"
+}, {
+  "strTeam" : "Bournemouth",
+  "intFormedYear" : "1890",
+  "strStadium" : "Vitality Stadium"
+}, {
+  "strTeam" : "Brentford",
+  "intFormedYear" : "1889",
+  "strStadium" : "Brentford Community Stadium"
+}, {
+  "strTeam" : "Brighton",
+  "intFormedYear" : "1901",
+  "strStadium" : "Amex Stadium"
+}, {
+  "strTeam" : "Burnley",
+  "intFormedYear" : "1882",
+  "strStadium" : "Turf Moor"
+}, {
+  "strTeam" : "Chelsea",
+  "intFormedYear" : "1905",
+  "strStadium" : "Stamford Bridge"
+}, {
+  "strTeam" : "Crystal Palace",
+  "intFormedYear" : "1905",
+  "strStadium" : "Selhurst Park"
+}, {
+  "strTeam" : "Everton",
+  "intFormedYear" : "1878",
+  "strStadium" : "Goodison Park"
+}, {
+  "strTeam" : "Fulham",
+  "intFormedYear" : "1879",
+  "strStadium" : "Craven Cottage"
+}, {
+  "strTeam" : "Liverpool",
+  "intFormedYear" : "1892",
+  "strStadium" : "Anfield"
+}, {
+  "strTeam" : "Luton",
+  "intFormedYear" : "1885",
+  "strStadium" : "Kenilworth Road"
+}, {
+  "strTeam" : "Manchester City",
+  "intFormedYear" : "1880",
+  "strStadium" : "Etihad Stadium"
+}, {
+  "strTeam" : "Manchester United",
+  "intFormedYear" : "1878",
+  "strStadium" : "Old Trafford"
+}, {
+  "strTeam" : "Newcastle",
+  "intFormedYear" : "1892",
+  "strStadium" : "St James' Park"
+}, {
+  "strTeam" : "Nottingham Forest",
+  "intFormedYear" : "1865",
+  "strStadium" : "City Ground"
+}, {
+  "strTeam" : "Sheffield United",
+  "intFormedYear" : "1889",
+  "strStadium" : "Bramall Lane"
+}, {
+  "strTeam" : "Tottenham",
+  "intFormedYear" : "1882",
+  "strStadium" : "Tottenham Hotspur Stadium"
+}, {
+  "strTeam" : "West Ham",
+  "intFormedYear" : "1895",
+  "strStadium" : "London Olympic Stadium"
+}, {
+  "strTeam" : "Wolves",
+  "intFormedYear" : "1877",
+  "strStadium" : "Molineux Stadium"
+} ]

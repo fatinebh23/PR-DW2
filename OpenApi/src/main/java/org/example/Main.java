@@ -27,7 +27,7 @@ public class Main {
 
         ListaTeams.forEach(System.out::println);
 
-        Path ficheroJson =Path.of(".","src","resources","teams.json");
+        Path ficheroJson =Path.of(".","src","main","resources","teams.json");
 
         escribirJSON(ficheroJson);
 
