@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
+//ignorar las otras etiquetas
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Team {
     private String strTeam;
