@@ -1,0 +1,25 @@
+[ {
+  "isbn" : 7895,
+  "year" : 1999,
+  "pages" : 500,
+  "titulo" : "SOL",
+  "autor" : "ana"
+}, {
+  "isbn" : 5695,
+  "year" : 2009,
+  "pages" : 966,
+  "titulo" : "MAR",
+  "autor" : "maria"
+}, {
+  "isbn" : 7562,
+  "year" : 2022,
+  "pages" : 522,
+  "titulo" : "LUNA",
+  "autor" : "sara"
+}, {
+  "isbn" : 8946,
+  "year" : 1985,
+  "pages" : 1000,
+  "titulo" : "NUBE",
+  "autor" : "carol"
+} ]
