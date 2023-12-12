@@ -26,5 +26,9 @@ public class Main {
         ////Imprimir el producto con el precio unitario más alto
 
         cproducts.imprimirProductoMasCaro();
+
+        // Imprimir el promedio de existencias en almacén
+
+        cproducts.promedioalmacen();
     }
 }

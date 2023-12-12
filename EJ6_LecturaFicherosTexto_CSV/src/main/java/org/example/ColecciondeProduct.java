@@ -104,11 +104,22 @@ public class ColecciondeProduct implements Serializable {
     //Imprimir el producto con el precio unitario más alto
 
     public void imprimirProductoMasCaro() {
-       /* //opción 1
-        listaCSV = listaCSV.stream().sorted(Comparator.comparing(Funko::getPrecio)).toList();
-        return "El funko más caro es: " + listaCSV.get(listaCSV.size() - 1).getNombre() + " y cuesta " + listaCSV.get(listaCSV.size() - 1).getPrecio() + "€";*/
-        //opción 2
-       /* return "El producto más caro es: " + listaCSV2.stream().max(Comparator.comparing(Product::getUnitPrice)).map(Product::getName) +
-                " y cuesta " + listaCSV2.stream().max(Comparator.comparing(Product::getUnitPrice)).map(Product::getUnitPrice) + "€");*/
+
+        System.out.println("El producto con el precio unitario más alto es : ");
+        System.out.println(listaCSV2.stream()
+                .max(Comparator.comparingDouble(Product::getUnitPrice))
+                .map(Product::getName).get());
+
     }
+    // Imprimir el promedio de existencias en almacén
+    public void promedioalmacen() {
+        System.out.println("Promedio de existencias en el  almacén:");
+        System.out.format("%.2f \n", listaCSV2.stream()
+                .mapToInt(Product::getUnitsInStock)
+                .average()
+                .getAsDouble());
+
+    }
+
+
 }
