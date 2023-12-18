@@ -15,7 +15,7 @@ import java.util.stream.Stream;
 import static java.nio.file.Files.lines;
 
 public class ColecciondeProduct implements Serializable {
-    final String COMMA_DELIMITER = ",";
+    final String COMMA_DELIMITER = ";";
     List<Product> listaCSV = new ArrayList<>();
 
     List<Product> listaCSV2 = new ArrayList<Product>();
@@ -32,7 +32,7 @@ public class ColecciondeProduct implements Serializable {
 
             for (int i = 1; i < linea.size(); i++) {
                 Product productoo = new Product();
-                fun = linea.get(i).split(",");
+                fun = linea.get(i).split(";");
                 productoo.setId(Integer.parseInt(fun[0]));
                 productoo.setName(fun[1]);
                 productoo.setSupplier(Integer.parseInt(fun[2]));
@@ -54,7 +54,7 @@ public class ColecciondeProduct implements Serializable {
         this.listaCSV = listaCSV;
     }
 
-    //Imprimimos el funko más caro. Opción 1
+
     public void imprimirLosNombresProductos() {
         //opción 1
         System.out.println("LOS NOMBRES DE LOS PRODUCTOS SON : ");

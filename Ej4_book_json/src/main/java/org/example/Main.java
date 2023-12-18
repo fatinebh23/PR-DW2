@@ -59,6 +59,7 @@ public class Main {
                 case 1:
                     System.out.println("Introduce el título del libro :");
                     String titulo = reader.nextLine();
+                    reader.nextLine();
                     System.out.println("Introduce el autor del libro:");
                     String autor = reader.nextLine();
                     System.out.println("Introduce el ISBN del libro:");

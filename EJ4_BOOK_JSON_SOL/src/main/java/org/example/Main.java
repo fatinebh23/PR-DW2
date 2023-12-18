@@ -23,6 +23,7 @@ public class Main {
                 add(new Book("El Señor de los Anillos", "Tolkien", 5678, 1954, 1000));
                 add(new Book("El Hobbit", "Tolkien", 9012, 1937, 500));
             }};
+
             menu(bookList);
             escribirJSON(ficheroJSON, bookList);
             List<Book> jsonDeserializado = leerJSON(ficheroJSON);
